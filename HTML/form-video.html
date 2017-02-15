@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Saturne</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../jquery/jquery.mobile-1.4.5.min.css"/> <!-- enlever la couleur du fond d'écran-->
+   		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="../jquery/jquery.mobile-1.4.5.min.js"></script> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/form-video.css"/>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+		
+	</head>
+
+	<body>
+			<div class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+        <div class="navbar-header">
+
+        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
+            	<span class="sr-only">Toggle navigation</span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+        	</button> 
+
+        	<a class="navbar-brand">Saturne HEI</a>
+
+        </div>
+
+        <div class="navbar-collapse collapse">
+        	<ul class="nav navbar-nav navbar-right">
+            	<li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+            	<li><a href="consultervideo.html"><span class="glyphicon glyphicon-film"></span> Vidéos</a></li>
+            	<li class="active"><a href="	#"><span class="glyphicon glyphicon-th"></span> Évènements</a></li>
+            	<li><a href="#"><span class="glyphicon glyphicon-send"></span> Envoyer vidéo</a></li>
+            	<li class="dropdown">
+              		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              		<span class="glyphicon glyphicon-user"></span> Compte</a>
+                		<ul class="dropdown-menu">
+                  			<li><a href="#">Paramètres</a></li>
+                  			<li><a href="#">Déconnexion</a></li>
+                		</ul>
+            	</li>            
+        	</ul>
+        </div>
+
+    	</div>
+    	</div>
+
+
+			<div data-role="page">
+
+				<div data-role="header">
+					<h1>Calendrier</h1>
+				</div><!-- /header -->
+					<div role="main" class="ui-content">
+				    <h2 id="informations">Informations Sur La Vidéo</h2>
+				    <form>
+				    	<label for="select-choice-mini" class="select">Choisir un événement : </label>
+				    	<select name="select-choice-event" id="select-choice-event" data-mini="true" data-inline="true">
+				    		<optgroup label="Choisir l'événement">
+				    		<option value="evenement1">Soirée BPM</option>
+				    		<option value="evenement2">Remise des diplômes</option>
+				    		<option value="evenement3">Troph'HEI</option>
+				    		<option value="evenement4">Raid HEI</option>
+				    	</select>
+				    	<label for="text-basic">Nom de la vidéo: </label>
+				    	<input type="text" name="text-nom-video" id="text-nom-video" value="">
+				    	<label for="textarea">Description de la vidéo:</label>
+				    	<textarea cols="80" rows="8" name="textarea-desc-video" id="textarea-desc-video"></textarea>
+				    	<label for="file">Séléctionner la vidéo à envoyer:</label>
+				    	<input type="file" name="file-vid" id="file-vid" value="" id="selectionner-video">
+				    	<a href="consultervideo.html" class="ui-shadow ui-btn ui-corner-all" id="bouton-envoyer-video">Envoyer la vidéo mamènnnnne</a>
+				    </form>
+				</div>
+			</div>
+		<!-- ajout adri-->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- ajout adri-->
+	</body>
+</html>
