@@ -22,10 +22,20 @@
 }
 .cal_aujourdhui
 {
-    color:red;
+    color:orange;
 }
 .cal_jours_av_ap
 {
     color:#5a779e;
 }
+
+img{
+    width : 100px;
+}
+
+.panel{
+    margin-top: 10px;
+}
+
+
 
