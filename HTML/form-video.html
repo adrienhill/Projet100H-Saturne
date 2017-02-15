@@ -10,7 +10,7 @@
         <title>Association Saturne</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/style.css"> 
-        <link rel="stylesheet" type="text/css" href="../css/form-video.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/css_administration-formulaireajout.css"/>
         <!-- Pas utile
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
@@ -35,15 +35,15 @@
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
                 <li><a href="consultervideo.html"><span class="glyphicon glyphicon-film"></span> Vidéos</a></li>
                 <li><a href="calendrier.html"><span class="glyphicon glyphicon-th"></span> Évènements</a></li>
-                <li><a href="form-video.html"><span class="glyphicon glyphicon-send"></span> Envoyer vidéo</a></li>
+                <li class="active"><a href="form-video.html"><span class="glyphicon glyphicon-send"></span> Envoyer vidéo</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                     <span class="glyphicon glyphicon-user"></span> Compte</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Paramètres</a></li>
+                            <li><a href="parametrescompte.html">Paramètres</a></li>
                             <li><a href="#">Déconnexion</a></li>
                         </ul>
                 </li>            
@@ -55,73 +55,47 @@
 
         <div class="container">
 
-        <div class="panel panel-default">
-        <div class="panel-heading">
-         <div class="row">
-            <div class="col-xs-1"><span class="glyphicon glyphicon-open-file" style="font-size:80%"></span></div>
-            <div class="col-xs-3"></div>
-            <div class="col-xs-4">Envoyer une vidéo</div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-2"><span class="glyphicon glyphicon-send"></span></div>
+                    <div class="col-xs-8">Envoyer vidéo</div>
+                </div>
+                </div>
+            </div>
+
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                          <label for="evenementvideo">Évènement de la vidéo :</label>
+                          <select class="form-control" name="categorie" id="evenementvideo" required>
+                            <option>Afterwork Saturne</option>
+                            <option>Soirée BPM</option>
+                            <option>Remise des diplômes</option>
+                            <option>Raid HEI</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="titrevideo">Titre de la vidéo :</label>
+                          <input  class="form-control" type="text" name="titre" id="titrevideo" placeholder="Ex: Vidéo Aftework Saturne" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="filebutton">Sélectionner un fichier :</label>
+                            <input id="filebutton" name="filebutton" class="input-file" type="file">
+                        </div>
+                        <div class="form-group">
+                          <label for="descriptionVideo">Description de la vidéo :</label>                    
+                            <textarea class="form-control" id="descriptionVideo" name="descriptionVideo"></textarea>
+                        </div>
+                        
+                        <div class="row" id="footerform">
+                          <input type="submit" class="btn btn-success" value="Envoyer la vidéo">
+                        </div>
+                    </form>
+             
+            </div>
+
         </div>
-         </div>
-        </div>
-        <form class="form-horizontal">
-<fieldset>
-
-<!-- Form Name -->
-<legend>Informations sur la vidéo</legend>
-
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Choisir un évènement</label>
-  <div class="col-md-2">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="1">Soirée BPM</option>
-      <option value="2">Remise des diplômes</option>
-      <option value="3">Troph'HEI</option>
-      <option value="4">Raid HEI</option>
-    </select>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="nomVideo">Nom de la vidéo</label>  
-  <div class="col-md-4">
-  <input id="nomVideo" name="nomVideo" placeholder="Exemple : Vidéo soirée BPM" class="form-control input-md" type="text">
-    
-  </div>
-</div>
-
-<!-- Textarea -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="descriptionVideo">Description de la vidéo</label>
-  <div class="col-md-4">                     
-    <textarea class="form-control" id="descriptionVideo" name="descriptionVideo">
-    </textarea>
-  </div>
-</div>
-
-<!-- File Button --> 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="filebutton">Sélectionner un fichier</label>
-  <div class="col-md-4">
-    <input id="filebutton" name="filebutton" class="input-file" type="file">
-  </div>
-</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="envoyervideo"></label>
-  <div class="col-md-4">
-    <button id="envoyervideo" name="envoyervideo" class="btn btn-primary">Envoyer la vidéo</button>
-  </div>
-</div>
-
-</fieldset>
-</form>
-    
-        </div>
-      
+        
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
