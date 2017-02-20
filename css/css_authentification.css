@@ -20,9 +20,3 @@ form{
     height: 100%;
     z-index: -1;
 }
-
-a{
-	float: right;
-	color: orange;
-	margin-top: 10%;
-}
